@@ -1,0 +1,46 @@
+--- Value Counts for Gender ---
+gender
+1    316
+2    107
+
+--- Mean Height/Weight by Gender ---
+            height     weight
+gender                       
+1       171.892222  68.653543
+2       161.032143  54.384615
+
+--- Missing Values % ---
+id             0.000000
+gender         0.000000
+star_sign     20.330969
+phone_os      18.439716
+height        17.494090
+weight        20.094563
+sleepiness    21.513002
+iq            18.676123
+fb_friends    18.203310
+yt            21.276596
+self_intro    24.586288
+
+--- Categorical Feature Unique Values ---
+
+star_sign:
+star_sign
+雙魚座    38
+獅子座    35
+水瓶座    34
+天秤座    33
+巨蟹座    31
+雙子座    28
+處女座    26
+摩羯座    26
+射手座    23
+天蠍座    23
+牡羊座    21
+金牛座    19
+phone_os:
+phone_os
+Android          188
+Apple            155
+Windows Phone      1
+JohnCena           1

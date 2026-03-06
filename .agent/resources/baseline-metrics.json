@@ -1,0 +1,59 @@
+{
+    "project_standards": {
+        "version": "1.0",
+        "last_updated": "2026-03-05",
+        "global_random_seed": 42
+    },
+    "domain_benchmarks": {
+        "classification": {
+            "default_success_threshold": 0.80,
+            "imbalanced_data_priority": "PR-AUC",
+            "high_precision_use_cases": [
+                "fraud_detection",
+                "medical_diagnosis"
+            ],
+            "high_recall_use_cases": [
+                "lead_gen",
+                "initial_screening"
+            ]
+        },
+        "regression": {
+            "acceptable_mape": 0.15,
+            "outlier_tolerance": "huber_loss"
+        }
+    },
+    "business_kpi_mapping": {
+        "boy_or_girl": {
+            "technical_metric": "Accuracy",
+            "business_goal": "Maximize accuracy",
+            "minimum_viable_performance": 0.83,
+            "cost_of_false_positive": "Marketing budget waste per user",
+            "cost_of_false_negative": "Lifetime Value (LTV) loss"
+        },
+        "churn_prediction": {
+            "technical_metric": "Recall",
+            "business_goal": "Maximize retention reach",
+            "minimum_viable_performance": 0.75,
+            "cost_of_false_positive": "Marketing budget waste per user",
+            "cost_of_false_negative": "Lifetime Value (LTV) loss"
+        },
+        "demand_forecasting": {
+            "technical_metric": "WAPE (Weighted Mean Absolute Percentage Error)",
+            "business_goal": "Inventory optimization",
+            "minimum_viable_performance": 0.85,
+            "impact_of_overestimation": "Storage costs/waste",
+            "impact_of_underestimation": "Stock-out/Lost sales"
+        },
+        "fraud_detection": {
+            "technical_metric": "Precision @ Recall 0.90",
+            "business_goal": "Minimize financial loss while maintaining UX",
+            "minimum_viable_performance": 0.95,
+            "impact_of_false_positive": "Customer friction/Support tickets"
+        }
+    },
+    "compute_budgets": {
+        "eda_sample_size": 100000,
+        "max_optuna_trials": 100,
+        "max_training_time_minutes": 60
+    }
+}
